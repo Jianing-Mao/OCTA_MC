@@ -50,9 +50,8 @@ Run [lookImage.m](https://github.com/Jianing-Mao/OCTA_MC/blob/master/Code/lookIm
 * ...
 
 # Example
-<img src="https://github.com/Jianing-Mao/OCTA_MC/blob/master/example/Bscan.png" width="200px">
-
-![full-wavelength FD-OCT B-scan image](https://github.com/Jianing-Mao/OCTA_MC/blob/master/example/qocta.png){:height="50%" width="50%"}
+<img src="https://github.com/Jianing-Mao/OCTA_MC/blob/master/example/Bscan.png" width="500px">
+<img src="https://github.com/Jianing-Mao/OCTA_MC/blob/master/example/qocta.png" width="500px">
 
 # Acknowledgement
 The codes are built on [MatScat](https://ww2.mathworks.cn/matlabcentral/fileexchange/36831-matscat), open-source codes in [OMLC](https://omlc.org/software/mc/) and [OCT_MC](https://github.com/RMTariant/OCT_MC). We sincerely appreciate the authors for sharing their codes. If you also want to try a more classical (such as using pencil beams and random sampling step sizes) but still a full-spectrum simulation, please refer to [fullwaveOCT code](https://github.com/Jianing-Mao/fullwaveOCT) and [paper](https://opg.optica.org/boe/fulltext.cfm?uri=boe-14-9-4644&id=536404)
