@@ -50,9 +50,7 @@ Run [lookImage.m](https://github.com/Jianing-Mao/OCTA_MC/blob/master/Code/lookIm
 * ...
 
 # Example
-![full-wavelength FD-OCT B-scan image](https://github.com/Jianing-Mao/OCTA_MC/blob/master/example/Bscan.png){:height="50%" width="50%"}
-
-![full-wavelength FD-OCT B-scan image](https://github.com/Jianing-Mao/OCTA_MC/blob/master/example/focus.png){:height="50%" width="50%"}
+<img src="https://github.com/Jianing-Mao/OCTA_MC/blob/master/example/Bscan.png" width="200px">
 
 ![full-wavelength FD-OCT B-scan image](https://github.com/Jianing-Mao/OCTA_MC/blob/master/example/qocta.png){:height="50%" width="50%"}
 
