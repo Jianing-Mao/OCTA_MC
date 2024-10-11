@@ -65,7 +65,7 @@ for i = 1:num_vessel
     vessel_radius_all(i) = input(['No.',num2str(i),' vessel_radius (cm):']);% cm
     blood_radius_all(i) = input(['No.',num2str(i),' blood_radius (cm):']);% cm
 end
-save('particle_dir/vessel_information.mat', 'vessel_center_xaxis_all', 'vessel_center_zaxis_all','vessel_radius_all','blood_radius_all');
+save('parameters/vessel_information.mat', 'vessel_center_xaxis_all', 'vessel_center_zaxis_all','vessel_radius_all','blood_radius_all');
 
 for jj=1:samplePoints % Every wavelength needs a independent file
     disp(['wavelength No.',num2str(jj),'generated.'])
