@@ -2,6 +2,7 @@
 
 # Example
 If you want to obtain similar results like those in our paper, please refer to dictionary [example](https://github.com/Jianing-Mao/OCTA_MC/tree/master/parameters), and run the lookImage.m.
+
 <img src="https://github.com/Jianing-Mao/OCTA_MC/blob/master/example/Bscan.png" width="500px">
 <img src="https://github.com/Jianing-Mao/OCTA_MC/blob/master/example/qocta.png" width="500px">
 
