@@ -7,7 +7,7 @@
 #include <omp.h>
 
 #define Ntiss 19   /* Number of tissue types. */
-#define STRLEN 32  /* String length. */
+#define STRLEN 100  /* String length. */
 #define ls 1.0E-10 /* Moving photon a little bit off the voxel face */
 #define PI 3.1415926
 #define LIGHTSPEED 2.997925E10 /* in vacuo speed of light [cm/s] */
