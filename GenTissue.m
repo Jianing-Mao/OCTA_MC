@@ -67,7 +67,7 @@ for i = 1:num_vessel
 end
 save('particle_dir/vessel_information.mat', 'vessel_center_xaxis_all', 'vessel_center_zaxis_all','vessel_radius_all','blood_radius_all');
 
-for jj=1 % Every wavelength needs a independent file
+for jj=1:samplePoints % Every wavelength needs a independent file
     disp(['wavelength No.',num2str(jj),'generated.'])
     myname = ['infi',num2str(jj)];
     waist  = (lam(jj)/nm)/pi/(beamw/2/flens); % Waist of the beam
