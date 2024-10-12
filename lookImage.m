@@ -1,7 +1,7 @@
 clear
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% %%%%%%%%%%%%%%%%%%%%% Params settings START %%%%%%%%%%%%%%%%%%%%%%%%%%%
-myname = 'infi1';
+myname = 'settings/infi1';
 filename = sprintf('%s_H.mci',myname);
 disp(['loading ' filename])
 fid = fopen(filename, 'r');
@@ -32,7 +32,8 @@ k_lin = linspace(2*pi/lambda_start,2*pi/lambda_stop,samplePoints);
 Bscan_number = 4; % make sure it is the same as fullwaveMC_Bscan_OCTA.c
 sig_type = 'sig'; %sig or sig_ss or sig_ms
 noise_amp = 0.05; % noise amplitude
-kernel_size = 7; % OCTA window size
+FFT_points = samplePoints;
+kernel_size = 5; % OCTA window size
 u1 = 0.5;%mm/s, averaged velocity, make sure it is the same as Gen_particles.m
 numBins = 20; % Q-OCTA binning number
 lower_bound_num = 25; % #%,Q-OCTA variance range
@@ -44,7 +45,7 @@ load('parameters/vessel_information.mat')
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% OCT Bscan
 sig = zeros(samplePoints,Ndetectors);
-OCT_all = zeros(samplePoints/2+1,Ndetectors,Bscan_number);
+OCT_all = zeros(FFT_points/2+1,Ndetectors,Bscan_number);
 for j_all = 1:Bscan_number
     for j = 1:Ndetectors
         disp(j)
@@ -71,13 +72,14 @@ for j_all = 1:Bscan_number
     I = abs(sig + ref_amp+noise1).^2 - abs(sig - ref_amp+noise2).^2; % balance detection
     S_k =1;
     I = sqrt(S_k).*I;
+    I = I/max(max(I));
     %% Processing the OCT signal
     k = (k_lin);
     %Apply low pass filter and hanning window
     ksampling = 2*pi/(k(1)-k(2));
     rawAline = I.*hanning(length(k));
     %Calculate Aline
-    M10 = length(rawAline(:,1));
+    M10 = FFT_points;
     OCT = abs(ifft(rawAline,M10));
     OCT = OCT(1:floor(length(OCT(:,1))/2)+1,:);
     OCT(2:end-1,:) = OCT(2:end-1,:);
@@ -88,7 +90,7 @@ x = linspace(-radius,radius,Ndetectors);
 z = z/2;
 %% OCTA
 images = OCT_all;
-X_size = samplePoints/2+1;
+X_size = FFT_points/2+1;
 Y_size = Ndetectors;
 
 oct_amplitude_temp = images(1:X_size,1:Y_size,:);
@@ -178,16 +180,16 @@ for id_vessel = 1:length(vessel_radius_all)
     figure
     data = [v2,decor_map_filtered1];
     
-    x = data(:,1);
-    y = data(:,2);
+    xdata = data(:,1);
+    ydata = data(:,2);
     
     edges = linspace(0, 1, numBins+1);
     binMeans = zeros(numBins, 1);
     binVars = zeros(numBins, 1);
     
     for i = 1:numBins
-        binIndices = x > edges(i) & x <= edges(i+1);
-        binData = y(binIndices);
+        binIndices = xdata > edges(i) & xdata <= edges(i+1);
+        binData = ydata(binIndices);
         
         if ~isempty(binData)
             lowerBound = prctile(binData, lower_bound_num);
