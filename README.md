@@ -1,9 +1,10 @@
 ### Official implementation of "Monte Carlo-based realistic simulation of optical coherence tomography angiography"
 
 # Example
-If you want to obtain similar results like those in our paper, please refer to dictionary [example](https://github.com/Jianing-Mao/OCTA_MC/tree/master/parameters), and run the lookImage.m.
+If you want to obtain similar results like those in our paper, please download the examples [here](https://drive.google.com/file/d/17Pwpd4Wvzu0sZblR-NfzYP1sEmP-644f/view?usp=drive_link), and run the lookImage.m in each dictionary.
 
 <img src="https://github.com/Jianing-Mao/OCTA_MC/blob/master/example/Bscan.png" width="500px">
+<img src="https://github.com/Jianing-Mao/OCTA_MC/blob/master/example/Bscan2.png" width="500px">
 <img src="https://github.com/Jianing-Mao/OCTA_MC/blob/master/example/qocta.png" width="500px">
 
 ## Get Started
