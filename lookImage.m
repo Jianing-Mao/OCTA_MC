@@ -72,6 +72,10 @@ for j_all = 1:Bscan_number
     I = abs(sig + ref_amp+noise1).^2 - abs(sig - ref_amp+noise2).^2; % balance detection
     S_k =1;
     I = sqrt(S_k).*I;
+<<<<<<< HEAD
+=======
+    I = I/max(max(I));
+>>>>>>> e677e7118fc0b7b16c36add578662901f2d75ee6
     %% Processing the OCT signal
     k = (k_lin);
     %Apply low pass filter and hanning window
