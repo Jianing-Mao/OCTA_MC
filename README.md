@@ -31,7 +31,7 @@ After this, you can get N+1 .bin file: _data_static_particles.bin_, _data_dynami
 
 ### Step II: run the Monte Carlo
 
-Compile the [fullwaveMC_Bscan_OCTA.c](https://github.com/Jianing-Mao/OCTA_MC/blob/master/Code/fullwaveMC_Bscan_OCTA.c)
+Compile the [fullwaveMC_Bscan_OCTA.c](https://github.com/Jianing-Mao/OCTA_MC/blob/master/fullwaveMC_Bscan_OCTA.c)
 ```sh
 gcc fullwaveMC_Bscan_OCTA.c -lm -o test
 ```
@@ -48,7 +48,7 @@ You can generate a Bscan by running the simulation of all of the detector in par
 ```
 ### Step III: show the results
 
-Run [lookImage.m](https://github.com/Jianing-Mao/OCTA_MC/blob/master/Code/lookImage.m) to show the OCT, OCTA and quantitative OCTA results.
+Run [lookImage.m](https://github.com/Jianing-Mao/OCTA_MC/blob/master/lookImage.m) to show the OCT, OCTA and quantitative OCTA results.
 
 **Make sure the parameters (wavelength, diameter, RI, number density, Bscan_number...) between the "Params settings START" and "Params settings DONE" are the same in every .m files.**
 
