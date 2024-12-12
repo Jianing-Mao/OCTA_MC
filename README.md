@@ -61,5 +61,25 @@ Run [lookImage.m](https://github.com/Jianing-Mao/OCTA_MC/blob/master/lookImage.m
 # Acknowledgement
 The codes are built on [MatScat](https://ww2.mathworks.cn/matlabcentral/fileexchange/36831-matscat), open-source codes in [OMLC](https://omlc.org/software/mc/) and [OCT_MC](https://github.com/RMTariant/OCT_MC). We sincerely appreciate the authors for sharing their codes. If you also want to try a more classical (such as using pencil beams and random sampling step sizes) but still a full-spectrum simulation, please refer to [fullwaveOCT code](https://github.com/Jianing-Mao/fullwaveOCT) and [paper](https://opg.optica.org/boe/fulltext.cfm?uri=boe-14-9-4644&id=536404)
 
+# Citation
+If you use this code in your own research, please cite the following papers:
+
+```
+@article{Mao:25,
+author = {Jianing Mao and Hang Su and Ping Xue and Yuye Ling},
+journal = {Biomed. Opt. Express},
+keywords = {Biomedical imaging; Dynamic light scattering; Imaging techniques; Optical coherence tomography; Speckle imaging; Speckle patterns},
+number = {1},
+pages = {142--158},
+publisher = {Optica Publishing Group},
+title = {Monte Carlo-based realistic simulation of optical coherence tomography angiography},
+volume = {16},
+month = {Jan},
+year = {2025},
+url = {https://opg.optica.org/boe/abstract.cfm?URI=boe-16-1-142},
+doi = {10.1364/BOE.540916},
+}
+```
+
 # Contact
 If you have any questions or any comments about the simulation, please do not hesitate to contact [jianing.mao@sjtu.edu.cn](jianing.mao@sjtu.edu.cn)
